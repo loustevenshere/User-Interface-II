@@ -25,13 +25,13 @@ vertical-align: baseline;
     box-sizing: border-box;
     max-width: 100%;
 }
-
-.first_flex {
+/* Navigation bar CSS */
+.nav_bar {
     display: flex;
     justify-content: space-evenly;
     background-color: #DAA520;
 }
-.my_name {
+.my_name_header {
     display: flex;
     flex-flow:wrap row;
     width: 50%;
@@ -44,7 +44,7 @@ vertical-align: baseline;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.header_nav {
+.links {
     display: flex;
     flex-flow:wrap row;
     width: 50%;
@@ -57,7 +57,7 @@ vertical-align: baseline;
 
 }
 
-.nav_item {
+ .nav_links {
     margin-right: 5%;;
     border: 1px solid grey;
     border-radius: 15px 50px;
@@ -67,13 +67,14 @@ vertical-align: baseline;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Hero Section */
 .hero {
     height: 500px;
     width:100%;
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: nowrap column;
     justify-content: center;
-    align-content: space-between;
+    align-content: center;
     margin-top: 3%;
     background: url("/Users/loustevens/Desktop/Lambda/Sprint-1-HTML-CSS-Intro/User-Interface-II/parker-coffman-auZ32bpNGRA-unsplash.jpg");
     background-size: 100% 100%;
@@ -91,7 +92,7 @@ h1 {
     text-decoration: overline;
 }
 
-.hero_projects_button span{
+.hero_projects_button {
     border: 1px solid yellowgreen;
     border-radius: 25px;
     background-color: teal;
@@ -101,26 +102,29 @@ h1 {
     font-size: 1.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 5%;
+    text-align: center;
 }
-/*Need to fix the "My Projects button" it takes up a whole line.*/
+/* Need to fix the "My Projects button" it takes up a whole line.*/
 .hero a:hover {
     background-color: white;
 
 }
 
-.first_chunk {
-    margin-top: 10%;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    height: 350px;
-    width: 100%;
-}
+/* Content section */
 
+.content {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5%;
+    justify-content: space-between;
+}
 .pics_container {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
+    width: 30%;
+    margin-bottom: 2%;
 }
 .sand_pic {
     height: 200px;
@@ -133,18 +137,10 @@ figcaption {
     text-align: center;
     text-shadow: 1px 1px #006600;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
-
-.second_chunk {
-    margin-top: 1%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row nowrap;
-    height: 500px; 
-    width: 100%;
-}
+/* Footer section */
 
 footer {
     display: flex;
@@ -163,13 +159,15 @@ a {
     color: black;
 }
 
+/*800px screen or less */
+
 @media (max-width: 800px) {
-    .my_name {
+    .my_name_header {
         font-size: 1.8em;
         font-style: italic;
     }
 
-    .nav_item {
+     .nav_links {
         font-size: 0.8em;
     }
 
@@ -183,6 +181,8 @@ a {
     }
 }
 
+/* 500px or less screen */
+
 @media (max-width: 500px) {
     header {
         display: flex;
@@ -191,11 +191,17 @@ a {
         align-items: center;
     }
 
+    .my_name_header {
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline;
+    }
+
     .header_nav {
         flex-flow: column wrap;
     }
 
-    .nav_item {
+     .nav_links {
         margin-bottom: 1%;
     }
     
@@ -204,40 +210,26 @@ a {
         margin-top: 1%;
         justify-content: center;
         align-content: center;
+        text-decoration: line-through;
     }
 
-    .first_chunk {
-        margin-top: 10%;
+    .content {
+        width: 100%;
         display: flex;
+        flex-flow: row wrap;
+        margin-top: 5%;
         justify-content: space-between;
-        flex-flow: column nowrap;
-        height: 50vh;
-        width: 80%;
-        margin-right: 10%;
-        margin-left: 10%;
-        margin-bottom: 50%;
     }
-
-    .second_chunk {
-        margin-top: 1%;
-        display: flex;
-        justify-content: space-between;
-        flex-flow: column nowrap;
-        height: 50vh; 
-        width: 80%;
-        margin-right: 10%;
-        margin-left: 10%;
-    }
-    
     .pics_container {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
+        width: 45%;
     }
 
     .sand_pic {
         height: 200px;
-        width: 80%;
+        width: 90%;
         margin-bottom: 5%;
         
     }
@@ -248,6 +240,6 @@ a {
     }
 
     footer {
-        margin-top: 60%;
+        margin-top: 10%;
     }
 }
