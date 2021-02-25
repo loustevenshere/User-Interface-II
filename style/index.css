@@ -1,1 +1,245 @@
 /* Add CSS styling here */
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;  
+padding: 0;  
+border: 0;  
+font-size: 100%;  
+font: inherit;  
+vertical-align: baseline;  
+}
+
+* {
+    border: 1px solid black;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+/* Navigation bar CSS */
+.nav_bar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #DAA520;
+}
+.my_name_header {
+    display: flex;
+    flex-flow:wrap row;
+    width: 50%;
+    height: 10%;
+    font-size: 2.5rem;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 2.5%;
+    margin-left: 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.links {
+    display: flex;
+    flex-flow:wrap row;
+    width: 50%;
+    height: 10%;
+    font-size: 1.2rem;
+    justify-content: flex-end;
+    align-content: center;
+    margin-top: 3%;
+    
+
+}
+
+ .nav_links {
+    margin-right: 5%;;
+    border: 1px solid grey;
+    border-radius: 15px 50px;
+    text-decoration: none;
+    background-color: #b3ecff;
+    padding: 1% 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 500px;
+    width:100%;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 3%;
+    background: url("/Users/loustevens/Desktop/Lambda/Sprint-1-HTML-CSS-Intro/User-Interface-II/parker-coffman-auZ32bpNGRA-unsplash.jpg");
+    background-size: 100% 100%;
+    opacity: 0.9;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: overline;
+}
+
+.hero_projects_button {
+    border: 1px solid yellowgreen;
+    border-radius: 25px;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    box-sizing: content-box;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5%;
+    text-align: center;
+}
+/* Need to fix the "My Projects button" it takes up a whole line.*/
+.hero a:hover {
+    background-color: white;
+
+}
+
+/* Content section */
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.pics_container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    width: 30%;
+    margin-bottom: 2%;
+}
+.sand_pic {
+    height: 200px;
+    width: 90%;
+    margin-left: 5%;
+    
+}
+
+figcaption {
+    text-align: center;
+    text-shadow: 1px 1px #006600;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Footer section */
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    background-color: #d9f2ea;
+    height: 1%;
+}
+
+.twitter {
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+a {
+    color: black;
+}
+
+/*800px screen or less */
+
+@media (max-width: 800px) {
+    .my_name_header {
+        font-size: 1.8em;
+        font-style: italic;
+    }
+
+     .nav_links {
+        font-size: 0.8em;
+    }
+
+    figcaption {
+        font-size: .8em;
+        text-shadow: none;
+    }
+
+    footer {
+        height: 50px;
+    }
+}
+
+/* 500px or less screen */
+
+@media (max-width: 500px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .my_name_header {
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline;
+    }
+
+    .header_nav {
+        flex-flow: column wrap;
+    }
+
+     .nav_links {
+        margin-bottom: 1%;
+    }
+    
+    h1.hero {
+        font-size: 1.4em;
+        margin-top: 1%;
+        justify-content: center;
+        align-content: center;
+        text-decoration: line-through;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 5%;
+        justify-content: space-between;
+    }
+    .pics_container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        width: 45%;
+    }
+
+    .sand_pic {
+        height: 200px;
+        width: 90%;
+        margin-bottom: 5%;
+        
+    }
+
+    figcaption {
+        font-size: 0.5em;
+        margin-bottom: 5%;
+    }
+
+    footer {
+        margin-top: 10%;
+    }
+}
